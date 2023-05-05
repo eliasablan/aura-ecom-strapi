@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cotizaciones",
+  "info": {
+    "singularName": "cotizacion",
+    "pluralName": "cotizaciones",
+    "displayName": "Cotizacion"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "producto": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::producto.producto"
+    },
+    "color": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::color.color"
+    },
+    "talla": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::talla.talla"
+    },
+    "consulta": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::consulta.consulta"
+    },
+    "cantidad": {
+      "type": "integer"
+    }
+  }
+}

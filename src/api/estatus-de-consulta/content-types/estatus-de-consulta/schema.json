@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estatuses_de_consulta",
+  "info": {
+    "singularName": "estatus-de-consulta",
+    "pluralName": "estatuses-de-consulta",
+    "displayName": "Estatus de consulta",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 3,
+      "maxLength": 20
+    }
+  }
+}

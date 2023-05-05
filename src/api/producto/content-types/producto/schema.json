@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "singularName": "producto",
+    "pluralName": "productos",
+    "displayName": "Producto",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 20,
+      "minLength": 3
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nombre"
+    },
+    "destacado": {
+      "type": "boolean",
+      "default": false
+    },
+    "fotos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "colores": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::color.color"
+    },
+    "tallas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::talla.talla"
+    }
+  }
+}

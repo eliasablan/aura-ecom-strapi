@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testimonios",
+  "info": {
+    "singularName": "testimonio",
+    "pluralName": "testimonios",
+    "displayName": "Testimonio",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "foto": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "cliente": {
+      "type": "string",
+      "required": true,
+      "maxLength": 20,
+      "unique": true,
+      "minLength": 4
+    },
+    "comentario": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 10,
+      "maxLength": 25
+    }
+  }
+}

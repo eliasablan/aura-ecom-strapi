@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "consultas",
+  "info": {
+    "singularName": "consulta",
+    "pluralName": "consultas",
+    "displayName": "Consulta",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cliente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cliente.cliente",
+      "inversedBy": "consultas"
+    },
+    "fecha_de_solicitud": {
+      "type": "datetime"
+    },
+    "estatus_de_consulta": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::estatus-de-consulta.estatus-de-consulta"
+    }
+  }
+}

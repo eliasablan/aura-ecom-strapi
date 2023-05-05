@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clientes",
+  "info": {
+    "singularName": "cliente",
+    "pluralName": "clientes",
+    "displayName": "Cliente",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 20,
+      "minLength": 5
+    },
+    "correo": {
+      "type": "email",
+      "unique": true
+    },
+    "telefono": {
+      "type": "biginteger",
+      "unique": true
+    },
+    "empresa": {
+      "type": "string"
+    },
+    "consultas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::consulta.consulta",
+      "mappedBy": "cliente"
+    }
+  }
+}
