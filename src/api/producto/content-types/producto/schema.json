@@ -16,7 +16,7 @@
       "type": "string",
       "required": true,
       "unique": true,
-      "maxLength": 20,
+      "maxLength": 35,
       "minLength": 3
     },
     "slug": {
